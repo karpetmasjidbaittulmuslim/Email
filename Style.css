@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2ff;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+.invitation {
+    background-color: ;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+.invitation-zip {
+    background-color: ;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+      .container-zip {
+          padding: 20px;
+          width: 300px;
+          background-image: url('animsi.jpg'); 
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          position: relative;
+          overflow: hidden;
+      }
+      
+
+
+      .field {
+          margin-bottom: 10px;
+          font-size: 20px;
+      }
+
+      .field label {
+          display: block;
+          font-size: 20px;
+          color: #fff;
+          margin-bottom: 5px;
+      }
+
+      .field input {
+          display: block;
+          width: 90%;
+          padding: 10px;
+          font-size: 20px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          font-size: 20px;
+          background-color: #D1D0CE;
+          color: blue;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #35508A;
+      }
+.image {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details {
+    flex: 1;
+}
+  p {
+    font-size: 17px;
+  }
+.map {
+    margin-top: 2em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media {
+    margin-top: 1em;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}

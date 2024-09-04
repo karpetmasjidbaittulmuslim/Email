@@ -4,31 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <style>
+      .field {
+  margin-bottom: 10px;
+
+}
+
+.field label {
+  display: block;
+  font-size: 15px;
+  color: #777;
+  border-radius: 5px;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none;
+}
+.container {
+    background-color: #2ff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    width: 300px;
+}
+
+    </style>
 </head>
 <body>
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+   <div class="container">
+<form id="form">
+  <div class="field">
+    <label for="from_name">Nama</label>
+    <input type="text" name="from_name" id="from_name">
+  </div>
+  <div class="field">
+    <label for="to_name">nama produk</label>
+    <input type="text" name="to_name" id="to_name">
+  </div>
+  <div class="field">
+    <label for="message">pesan</label>
+    <input type="text" name="message" id="message">
+  </div>
+  <div class="field">
+    <label for="reply_to">reply_to</label>
+    <input type="text" name="reply_to" id="reply_to">
+  </div>
 
-    <script type="text/javascript" src="">https://dashboard.emailjs.com/admin</script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("service_911f9l5"); // Ganti dengan User ID EmailJS Anda
-        })();
+  <input type="submit" id="button" value="Send Email" >
+</form>
+</div>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+<script type="text/javascript">
+  emailjs.init('0osLzmMYq2IOuWA86')
+</script>
+<script>
+  const btn = document.getElementById('button');
 
-            emailjs.sendForm('service_cmjxksr', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
-                    alert('Email successfully sent!');
-                }, function(error) {
-                    alert('Failed to send email, please try again later.');
-                });
-        });
-    </script>
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_jl56isx';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
 </body>
 </html>

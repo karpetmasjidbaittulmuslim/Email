@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars(trim($_POST['message']));
 
     // Set email tujuan
-    $to = "aimamsholikhin@gmail.com";  // Ganti dengan alamat email Anda
+    $to = "aimamsholikhin@gmail.com";  
     $subject = "Contact Form Submission from $name";
 
     // Persiapkan isi email

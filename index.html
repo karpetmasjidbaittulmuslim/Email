@@ -62,32 +62,25 @@ Kami adalah tim  dalam [bidang toko online,]. , kami berdedikasi untuk memberika
    </div>
    <script type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Inisialisasi EmailJS dengan User ID (Dapatkan dari Dashboard EmailJS)
+        emailjs.init("Fi_LC9NIpyV-XLM1C");
 
-   <script type="text/javascript">
-      emailjs.init('service_l1f9lir');
-   </script>
-   <script>
-      const btn = document.getElementById('button');
-
-      document.getElementById('form')
-         .addEventListener('submit', function(event) {
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            btn.value = 'Sending...';
-
-            const serviceID = 'default_service';
-            const templateID = 'template_jl56isx';
-
-            emailjs.sendForm(serviceID, templateID, this)
-               .then(() => {
-                  btn.value = 'Send Email';
-                  alert('terkirim boss!');
-               }, (err) => {
-                  btn.value = 'Send Email';
-                  alert(JSON.stringify(err));
-               });
-         });
-   </script>
+            emailjs.send("service_l1f9lir", "template_q5kj27p", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(function(response) {
+                document.getElementById("result").innerText = "✅ Email berhasil dikirim!";
+            }, function(error) {
+                document.getElementById("result").innerText = "❌ Gagal mengirim email.";
+            });
+        });
+    </script>
+   
     <section class="map">
     <h2>Find Us Here</h2>
     <iframe src="" 

@@ -1,100 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Formulir Kontak</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>karpet masjid</h1>
-    </header>
-    <main class="container">
-        <section class="content">
-            <div class="image">
-                <img src="logo.png" alt="Company Image">
-            </div>
-            <div class="details">
-                <h2>TENTANG KAMI.</h2>
-                <p>Selamat datang di [ALMUSLIM]!
 
-Kami adalah tim  dalam [bidang toko online,]. , kami berdedikasi untuk memberikan solusi dan inovatif yang sesuai dengan kebutuhan Anda.</p>
-                <p>Email : almuslimkarpet@gmail.com</p>
-                <p>Team:ALMUSLIM.inc, City, Bekasi</p>
-            </div>
-        </section>
-            <div class="invitation">
-        <h2>misi</h2>
-        <p>Visi kami adalah menjadi penyedia karpet masjid terpercaya, keindahan, dan kehandalan produk kami. Misi kami adalah memberikan solusi yang sempurna untuk setiap masjid , tetapi juga tahan lama dan nyaman digunakan dalam berbagai aktivitas ibadah.</p>
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <form id="contact-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <p id="result"></p>
     </div>
-                <div class="invitation-zip">
-        <h2>penyedia produk</h2>
-        <p>Kami dengan senag hati menawarkan koleksi karpet masjid terbaik, baik
-        yang diimpor langsung dari Turki maupun yang diproduksi secara lokal.
-        Setiap produk dipilih dengan cermat untuk memastikan bahwa Anda
-        mendapatkan karpet dengan kualitas terbaik, desain elegan, dan harga
-        yang relativ.</p>
-        <p>pastikan</p>
-        <p>anda memilih warna karpet yang tepat.</p>
-        <p></p>
-        <p>: </p>
-    </div>
-       <div class="container-zip">
-      <form id="form">
-          <div class="field">
-              <label for="from_name">Nama</label>
-              <input type="text" name="from_name" id="from_name">
-          </div>
-          <div class="field">
-              <label for="to_name">nama produk</label>
-              <input type="text" name="to_name" id="to_name">
-          </div>
-          <div class="field">
-              <label for="message">pesan</label>
-              <input type="text" name="message" id="message">
-          </div>
 
-          <input type="submit" id="button" value="Send Email">
-      </form>
-   </div>
-   <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        // Inisialisasi EmailJS dengan User ID (Dapatkan dari Dashboard EmailJS)
-        emailjs.init("Fi_LC9NIpyV-XLM1C");
-
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            emailjs.send("service_l1f9lir", "template_q5kj27p", {
-                from_name: document.getElementById("name").value,
-                from_email: document.getElementById("email").value,
-                message: document.getElementById("message").value
-            }).then(function(response) {
-                document.getElementById("result").innerText = "✅ Email berhasil dikirim!";
-            }, function(error) {
-                document.getElementById("result").innerText = "❌ Gagal mengirim email.";
-            });
-        });
-    </script>
-   
-    <section class="map">
-    <h2>Map</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7931.974318534694!2d107.1873574!3d-6.265418399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1741278988706!5m2!1sid!2sid" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
-
-    </main>
-    <footer>
-        <p>&copy; 2024 ALMUSLIM.inc</p>
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+    <script src="Script-bg.js"></script>
 </body>
 </html>

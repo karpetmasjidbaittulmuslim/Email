@@ -1,137 +1,143 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset Style */
+* {
     margin: 0;
     padding: 0;
-    background: #2ff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* Body */
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
 header {
-    background-color: #333;
+    background: #008080;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 1em 0;
+    font-size: 24px;
 }
 
+/* Container utama */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2em;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Konten */
 .content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px;
-}
-.invitation {
-    background-color: ;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-}
-.invitation-zip {
-    background-color: ;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    margin-top: 20px;
-}
-      .container-zip {
-          padding: 20px;
-          width: 300px;
-          background-image: url('jumin.jpg'); 
-          background-size: cover;
-          background-position: center;
-          border-radius: 10px;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-          position: relative;
-          overflow: hidden;
-      }
-      
-
-
-      .field {
-          margin-bottom: 10px;
-          font-size: 20px;
-      }
-
-      .field label {
-          display: block;
-          font-size: 20px;
-          color: #fff;
-          margin-bottom: 5px;
-      }
-
-      .field input {
-          display: block;
-          width: 90%;
-          padding: 10px;
-          font-size: 20px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-      }
-
-      input[type="submit"] {
-          display: block;
-          width: 100%;
-          padding: 10px;
-          font-size: 20px;
-          background-color: #D1D0CE;
-          color: blue;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-
-      input[type="submit"]:hover {
-          background-color: #35508A;
-      }
-.image {
-    flex: 1;
-    margin-right: 1em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .image img {
-    max-width: 100%;
+    width: 150px;
     height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.details h2 {
+    margin-bottom: 10px;
+    color: #008080;
+}
+
+/* Form */
+.container-zip {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol Kirim */
+#button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#button:hover {
+    background: #218838;
+}
+
+/* Map */
+.map {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
     border-radius: 8px;
 }
 
-.details {
-    flex: 1;
-}
-  p {
-    font-size: 17px;
-  }
-.map {
-    margin-top: 2em;
-    text-align: center;
-}
-
+/* Footer */
 footer {
-    background-color: #333;
+    background: #008080;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .social-media {
-    margin-top: 1em;
+    margin-top: 10px;
 }
 
 .social-icon {
     color: white;
+    font-size: 20px;
     margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.5em;
+    transition: 0.3s;
 }
 
 .social-icon:hover {
     color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    input {
+        font-size: 16px;
+    }
 }
